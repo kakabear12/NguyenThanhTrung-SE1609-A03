@@ -18,7 +18,6 @@ namespace BusinessObjectLayer.Models
             : base(options)
         {
         }
-
         public virtual DbSet<Category> Categories { get; set; }
         public virtual DbSet<Customer> Customers { get; set; }
         public virtual DbSet<FlowerBouquet> FlowerBouquets { get; set; }
