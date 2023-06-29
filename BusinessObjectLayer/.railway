@@ -1,8 +1,0 @@
-version: 1
-env: dotnet
-install:
-  - dotnet restore
-build:
-  - dotnet publish --no-restore -c Release -o out
-start:
-  - ./out/BusinessObjectLayer
