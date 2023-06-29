@@ -1,0 +1,16 @@
+version: 2
+env:
+  DOTNET_VERSION: "5.0"
+
+build:
+  frontend:
+    name: Build
+    script: |
+      nix-env -if .nixpacks/nixpkgs-293a28df6d7ff3dec1e61e37cc4ee6e6c0fb0847.nix && nix-collect-garbage -d
+      dotnet restore --runtime linux-x64
+      dotnet publish --no-restore -c Release -o out
+
+start:
+  frontend:
+    name: Start
+    script: dotnet ./out/BusinessObjectLayer.dll

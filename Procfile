@@ -1,0 +1,3 @@
+# Procfile
+
+frontend: ./out/BusinessObjectLayer
